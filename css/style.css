@@ -1,0 +1,449 @@
+body {
+    font-family: Arial,sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-image: url('../img/wickedbackground.png');
+    background-attachment: fixed;
+    font-family: "Darumadrop One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+}
+  
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 1s;
+    display: flex;
+    justify-content: center;
+
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#top-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0; 
+    margin: 0;
+    }
+    #heart-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; 
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    
+    .heart-icon {
+        position: absolute;
+        width: 70px; 
+        height: 70px;
+        animation: floatUp 3s ease-out forwards;
+        opacity: 0.8;
+        z-index: 10;
+    }
+    
+    @keyframes floatUp {
+        0% {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        80% {
+            transform: translateY(-50px) scale(1.2);
+            opacity: 1; /* 80%の時点までは透明度を維持 */
+        }
+        100% {
+            transform: translateY(-100px) scale(1.5);
+            opacity: 0; /* 最後にゆっくりと透明に */
+        }
+    }
+    
+    
+    #momo-dai-animation {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        z-index: 5;
+    }
+    
+ 
+    
+    
+    #momo-dai-animation {
+        position: relative; 
+        width: 500px;
+        height: 500px;
+        z-index: 5;
+        margin-bottom: -40px;
+    }
+    
+    
+    .animate-yura {
+    animation: yura 2s infinite ease-in-out;
+    width: 500px;
+    }
+    
+    @keyframes yura {
+    0%, 100% {
+    transform: translateY(0);
+    }
+    50% {
+    transform: translateY(-10px);
+    }
+    }
+    
+    #start-button {
+    padding: 15px 30px;
+    background-color: aliceblue;
+    color: black;
+    font-family: "Darumadrop One", sans-serif;
+    border: none;
+    border-radius: 30px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    #start-button:hover {
+    background-color: rgb(199, 229, 255);
+    }
+
+
+    
+
+
+
+
+.mood-selection {
+    justify-content: space-around;
+    
+}
+
+.img-container {
+    display: flex;
+    height: 390px;
+}
+
+.mood-icon {
+    cursor: pointer;
+    width: 400px;
+    height: auto;
+}
+
+.mood-icon:hover {
+    transform: scale(1.1);
+}
+
+#mood-image {
+    width: 500px;
+    margin-top: -55px;
+}
+
+#calendar-btn {
+    font-family: "Darumadrop One", sans-serif;
+    
+}
+
+#chat-btn {
+    font-family: "Darumadrop One", sans-serif;
+}
+
+
+#write-note {
+    font-family: "Darumadrop One", sans-serif;
+    text-align: center;
+}
+
+#comment-btn {
+    text-align: center;
+    margin-top: -40px;
+}
+
+
+#save-note {
+    font-family: "Darumadrop One", sans-serif;
+}
+
+#background-selector {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    }
+    
+    .background-option {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: border 0.3s ease;
+    }
+    
+    .background-option:hover {
+    border-color: aliceblue;
+    }
+
+h1, h2, h3 {
+    color: #333;
+}
+    
+button {
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 30px; 
+    transition: background-color 0.3s ease;
+    font-family: "Darumadrop One", sans-serif;
+}
+    
+button:hover {
+    background-color: rgb(199, 229, 255);
+}
+
+#calendar {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+#calendar div {
+margin: 5px;
+padding: 5px;
+border: 2px solid aliceblue;
+cursor: pointer;
+}
+
+#calendar div:hover {
+    background-color: rgb(199, 229, 255);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+        
+.calendar-header h2 {
+    margin: 0;
+}
+        
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+        
+.calendar-day {
+    width: 100%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+        
+.calendar-day img {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+        
+.calendar-day.active {
+    background-color: aliceblue;
+    color: black;
+}
+        
+.calendar-day:hover {
+    background-color: #e0e0e0;
+}
+            
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.memo-container {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+    
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+    
+.save-button {
+    width: 100%;
+    padding: 10px;
+    background-color: aliceblue;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+    
+.save-button:hover {
+    background-color: rgb(225, 241, 255);
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+#chat-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+#chat-container input,
+#chat-container textarea {
+    width: 100%; 
+    max-width: 400px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    font-size: 13px; 
+    box-sizing: border-box; 
+}
+
+
+
+#chat-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#name-input {
+    width: 100%; 
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid aliceblue; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#message-input {
+    width: 100%; 
+    max-width: 400px;
+    height: 150px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid aliceblue; 
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: none; 
+}
+
+#send-btn {
+    width: 100px; 
+    padding: 10px; 
+    background-color: aliceblue;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+#send-btn img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: -5px;
+}
+
+
+#send-btn:hover {
+    background-color: rgb(225, 241, 255);
+}
+
+#messages-list {
+    list-style-type: none; /* 黒丸をなくす */
+    padding: 0;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+    overflow-y: auto; 
+    max-height: 300px; 
+}
+
+
+    
+.page {
+    display: none;
+}
+    
+.page.active {
+    display: block;
+}
+    
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}

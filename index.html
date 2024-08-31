@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap" rel="stylesheet">
+    <title>ももだいのムードトラッカーアプリ</title>
+</head>
+<body>
+   
+
+
+    <div id="top-screen" class="fade-in delay-2">
+        <div id="momo-dai-animation">
+            <img id="momo-dai" src="./img/momo-dai.png" class="animate-yura" alt="ももとだい">
+            <div id="heart-container"></div>
+        </div>
+        <button id="start-button">はじめる</button>
+    </div>
+    
+
+<div class="fade-in delay-2">
+    <div id="mood-selection">
+        <h1>きょうのきぶんはどうかな</h1>
+        <img src="./img/good.png" data-mood="good" class="mood-icon">
+        <img src="./img/soso.png" data-mood="soso" class="mood-icon">
+        <img src="./img/bad.png" data-mood="bad" class="mood-icon">
+    </div>
+</div>
+
+<!-- 背景選択のアイコン -->
+<div id="background-selector">
+    <div class="background-option" data-bg="wickedbackground.png" style="background-image: url('./img/wickedbackground.png');"></div>
+    <div class="background-option" data-bg="wickedbackground2.png" style="background-image: url('./img/wickedbackground2.png');"></div>
+    <div class="background-option" data-bg="wickedbackground3.png" style="background-image: url('./img/wickedbackground3.png');"></div>
+</div>
+
+<div id="comment-display" style="display:none;">
+    <p id="mood-text"></p>
+    <img id="mood-image" src="">
+    <div id="comment-btn">
+        <button id="write-note">いまのきもちをかいてみよう</button>
+</div>
+</div>
+
+<div id="note-screen" style="display:none;">
+<textarea id="note-input"></textarea>
+<button id="save-note">とうろく</button>
+</div>
+
+<div id="calendar-screen" style="display:none;">
+    <div id="calendar"></div>
+</div>
+
+<div id="day-details" style="display:none;">
+    <p id="selected-day-mood"></p>
+    <p id="selected-day-note"></p>
+</div>
+
+<div class="fade-in delay-2">
+        <button id="calendar-btn">カレンダーをみる</button>
+<button id="chat-btn">おはなし</button>
+</div>
+
+<div id="chat-container" style="display:none;">
+    <input type="text" id="name-input" placeholder="名前を入力してください">
+    <input type="text" id="message-input" placeholder="メッセージをいれてね">
+    <button onclick="sendMessage()">そうしん</button>
+    <ul id="messages-list"></ul>
+</div>
+<script type="module" src="./js/index.js"></script>
+</body>
+</html>
+    
+
